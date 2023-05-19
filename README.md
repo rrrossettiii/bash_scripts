@@ -10,12 +10,13 @@
 </div>
 
 ## Goal:
-I wanted a place for myself or anyone else to go to remember useful one-liners, learn something new, or find examples of bash scripts.
+I wanted to create a resource for myself or anyone else to remember useful one-liners, learn something new, or find examples of bash scripts in the wild.
 
 ## Features:
 - Many useful [one-liners](https://github.com/rrrossettiii/bash_scripts/blob/trunk/.bash_scripts/bash/08-aliases.sh) and bash [utilities](https://github.com/rrrossettiii/bash_scripts/blob/trunk/.bash_scripts/bash/16-fn_utils.sh).
 - Easily add your own scripts by adding a `<script-name>.sh` file to `.bash_scripts/custom`
 - Sophisticated [history control](https://github.com/rrrossettiii/bash_scripts/blob/trunk/.bash_scripts/bash/00-history_control.sh).
+- Custom [command prompt](https://github.com/rrrossettiii/bash_scripts/blob/trunk/.bash_scripts/bash/64-command_prompt.sh).
 - [Colors!](https://github.com/rrrossettiii/bash_scripts/blob/trunk/.bash_scripts/bash/04-colors.sh)
 
 ## Setup:
@@ -44,4 +45,7 @@ I wanted a place for myself or anyone else to go to remember useful one-liners, 
     ```
     source ~/.bashrc
     ```
-6. Profit ???
+6. Profit [???]()
+
+## Todo:
+- Make a "no comments" branch.
