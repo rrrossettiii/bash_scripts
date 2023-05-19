@@ -1,6 +1,8 @@
-###
-### - fail2ban
-###
+#!/bin/bash
+### _================
+### __fail2ban
+### _================
+
 alias fail2ban-client='sudo fail2ban-client '
 f2b(){
     case $1 in

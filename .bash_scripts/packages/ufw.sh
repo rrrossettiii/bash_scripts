@@ -1,6 +1,8 @@
-###
-### -- UFW
-###
+#!/bin/bash
+### _================
+### __ufw
+### _================
+
 alias ufw='sudo ufw'
 ufwww(){
     case $1 in
