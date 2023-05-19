@@ -58,5 +58,5 @@ yt-batch-all(){ #_(batch all files in /_batches)
 	for i in "${!YT_BATCHES[@]}"
 		do yt-batch "${YT_BATCHES[i]}" #_(run downloader for each batch file)
 	done
-	tail -f nohup.out; #_(display output)
+	# tail -f nohup.out; #_(display output)
 }
