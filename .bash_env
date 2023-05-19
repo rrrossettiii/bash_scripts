@@ -1,0 +1,15 @@
+#!/bin/bash
+### _================
+### __Sensitive Info
+### _================
+
+### _(General)
+export ADMIN='' #_(admin username)
+export DRIVE_FS='' #_(drive file system)
+export DESKTOP_SERVICE='' #_(desktop service name)
+### _(Paths)
+export DOWNLOAD_PATH=''
+export GITHUB="/home/$ADMIN/Documents/Github" #_(where to install git repos)
+export DOCKER_COMPOSE_PATH="/home/$ADMIN/Docker/Compose"
+export QUARANTINE="/home/$ADMIN/QUARANTINE" #_(antivirus quarantine)
+export YT_PATH='' #_(yt-dlp library path)
