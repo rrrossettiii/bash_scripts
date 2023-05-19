@@ -13,8 +13,10 @@
 I wanted a place for myself or anyone else to go to remember useful one-liners, learn something new, or find examples of bash scripts.
 
 ## Features:
-- Many useful one-liners and bash utilities.
+- Many useful [one-liners](https://github.com/rrrossettiii/bash_scripts/blob/trunk/.bash_scripts/bash/08-aliases.sh) and bash [utilities](https://github.com/rrrossettiii/bash_scripts/blob/trunk/.bash_scripts/bash/16-fn_utils.sh).
 - Easily add your own scripts by adding a `<script-name>.sh` file to `.bash_scripts/custom`
+- Sophisticated [history control](https://github.com/rrrossettiii/bash_scripts/blob/trunk/.bash_scripts/bash/00-history_control.sh).
+- [Colors!](https://github.com/rrrossettiii/bash_scripts/blob/trunk/.bash_scripts/bash/04-colors.sh)
 
 ## Setup:
 1. Download this repo.
