@@ -3,6 +3,9 @@
 ### __Command Prompt
 ### _================
 
+### _(Is prompt enabled?)
+[[ $USE_BS_PROMPT == 0 ]] && return
+
 ### _(General)
 PS2="${GRAY}>${RESET} " #_(continue command)
 PS3='Please enter a number from above list: ' #_(script choice)
