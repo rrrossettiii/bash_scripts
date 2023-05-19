@@ -3,7 +3,7 @@
 ### __ultimate command prompt
 ### _================
 
-### __is prompt enabled?
+### __is prompt enabled ???
 [[ $USE_BS_PROMPT == 0 ]] && return
 
 ### __general
