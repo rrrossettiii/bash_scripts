@@ -23,30 +23,30 @@ I wanted to create a resource for myself and everyone else to find useful one-li
 
 ## Setup:
 1. Download this repo.
-    ```
-    git clone https://github.com/rrrossettiii/bash_scripts
-    ```
+```
+git clone https://github.com/rrrossettiii/bash_scripts
+```
 2. Copy `.bash_scripts` to your home directory.
-    ```
-    cp bash_scripts/.bash_scripts ~
-    ```
+```
+cp bash_scripts/.bash_scripts ~
+```
 3. Copy `.bash_env` to your home directory.
-    ```
-    cp bash_scripts/.bash_env ~
-    ```
+```
+cp bash_scripts/.bash_env ~
+```
 4. Copy `.bashrc` to your home directory.
-    ```
-    cp bash_scripts/.bashrc ~
-    ```
-    **or** paste this at the end of your current `.bashrc`.
-    ```
-    source ~/.bash_env ### loads .bash_env variables
-    source ~/.bash_scripts/init.sh ### loads all .bash_scripts
-    ```
-5. Reload your `.bashrc`.
-    ```
-    source ~/.bashrc
-    ```
+```
+cp bash_scripts/.bashrc ~
+```
+  *or* paste this at the end of your current `.bashrc`  
+```
+source ~/.bash_env ### loads .bash_env variables
+source ~/.bash_scripts/init.sh ### loads all .bash_scripts
+```
+5. Reload your `.bashrc`
+```
+source ~/.bashrc
+```
 6. Profit [???]()
 
 ## Todo:
