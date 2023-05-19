@@ -4,6 +4,7 @@
 <div align="center">
   
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Shell: 100%](https://img.shields.io/badge/Shell-100%25-green)
   
 #### A collection of *[bash](https://www.gnu.org/software/bash/manual/bash.html)* scripts to make ~~bash~~ *life* easier.
 
