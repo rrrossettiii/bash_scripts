@@ -25,7 +25,7 @@ alias ip-address='new-line; ip -o -f inet address | cut -d " " -f 2,7' ### your 
 alias net-stat='ip link ls up' ### network status
 alias cpu-stat='new-line; mpstat -P ALL' ### cpu stats
 alias core-temp='new-line; sensors | grep "Core\|cpu\|temp"' ### cpu core temps
-alias journal-lookup='journalctl -xe -f | grep '
+alias jgrep='journalctl -xe -f | grep ' ### grep the journal
 ### __peripherals
 ### _================
 alias audio-threads='fuser -v /dev/snd/*' ### audio threads

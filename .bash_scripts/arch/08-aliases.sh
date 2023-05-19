@@ -3,7 +3,7 @@
 ### __basic arch aliases
 ### _================
 
-### __upgrade
+### __system
 ### _================
 alias pacman='sudo pacman ' ### run pacman as root, duh!
 alias ???='pacman -Qi ' ### is this package installed?

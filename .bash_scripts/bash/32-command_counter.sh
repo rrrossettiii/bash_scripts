@@ -2,7 +2,9 @@
 ### _================
 ### __command counter
 ### _================
+
 ### *** WARNING: Very tempermental
+### _================
 [[ -z $SUCCESS_COUNTER ]] && export SUCCESS_COUNTER=0; ### initiate success counter
 [[ -z $ERROR_COUNTER ]] && export ERROR_COUNTER=0; ### initiate error counter
 capture_current(){

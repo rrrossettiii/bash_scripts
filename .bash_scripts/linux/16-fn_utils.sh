@@ -6,8 +6,8 @@
 ### bash
 ### _================
 sync-bash-root(){
-	sudo cp /home/$ADMIN/.bashrc /root/; ### sync .bashrc w/ root
-	sudo cp -r /home/$ADMIN/.bash_scripts /root/; ### sync .bash_scripts w/ root
+	sudo cp /home/$ADMIN/.bashrc /root/; ### sync .bashrc w/ /root/
+	sudo cp -r /home/$ADMIN/.bash_scripts /root/; ### sync .bash_scripts w/ /root/
 	rbrc; ### reload .bashrc
 }
 ### cpu-usage
@@ -17,7 +17,7 @@ cpu-usage(){
     awk '{usage=($2+$4)*100/($2+$4+$5)} END {print usage}' |
     awk '{printf("%.1f%\n", $1)}'
 }
-### services
+### services [systemd]
 ### _================
 services(){ ### show active services
 	local PARAMS=(
