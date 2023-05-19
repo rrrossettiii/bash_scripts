@@ -40,8 +40,8 @@ I wanted to create a resource for myself and everyone else to find useful one-li
     ```
     **or** paste this at the end of your current `.bashrc`.
     ```
-    source ~/.bash_env #_(loads .bash_env variables)
-    source ~/.bash_scripts/init.sh #_(loads all bash_scripts)
+    source ~/.bash_env ### loads .bash_env variables
+    source ~/.bash_scripts/init.sh ### loads all .bash_scripts
     ```
 5. Reload your `.bashrc`.
     ```
