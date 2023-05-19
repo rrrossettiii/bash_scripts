@@ -1,21 +1,24 @@
 #!/bin/bash
 ### _================
-### __Sensitive Info
+### ~/.bash_env
 ### _================
 
-### _(Editor)
+### Editor
 alias nano='nano -m -u -c -W --tabsize=4 --fill=100 --autoindent'
 export EDITOR=nano
 export VISUAL=nano
 
-### _(General)
-export ADMIN='' #_(admin username)
-export DRIVE_FS='ext4' #_(drive file system)
-export DESKTOP_SERVICE='' #_(desktop service name)[arch]
+### __Sensitive Info
+### _================
+
+### General
+export ADMIN='' ### admin username
+export DRIVE_FS='ext4' ### drive file system
+export DESKTOP_SERVICE='' ### desktop service name
 export USE_BS_PROMPT=0
-### _(Paths)
+### Paths
 export DOWNLOAD_PATH='/home/Downloads'
-export GITHUB="/home/$ADMIN/Documents/Github" #_(where to install git repos)
-export DOCKER_COMPOSE_PATH="/home/$ADMIN/Documents/Docker/Compose" #_(dir/ of docker-compose.yaml)
-export QUARANTINE="/home/$ADMIN/QUARANTINE" #_(antivirus quarantine)
-export YT_PATH='' #_(yt-dlp library path)
+export GITHUB="/home/$ADMIN/Documents/Github" ### git repos
+export DOCKER_COMPOSE_PATH="/home/$ADMIN/Documents/Docker/Compose" ### <path>/docker-compose.yaml
+export QUARANTINE="/home/$ADMIN/QUARANTINE" ### antivirus QUARANTINE
+export YT_PATH='/mnt/<your drive>/Media/Youtube' ### `yt-dlp` library path

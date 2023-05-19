@@ -1,6 +1,6 @@
 #!/bin/bash
 ### _================
-# ~/.bashrc
+### ~/.bashrc
 ### _================
 
 ### If not running interactively, don't do anything
@@ -12,5 +12,5 @@
 ### _================
 ### __BASH_SCRIPTS [last]
 ### _================
-source ~/.bash_env #_(loads .bash_env variables)
-source ~/.bash_scripts/init.sh #_(loads all bash_scripts)
+source ~/.bash_env ### loads .bash_env variables
+source ~/.bash_scripts/init.sh ### loads all .bash_scripts
