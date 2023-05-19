@@ -1,6 +1,6 @@
 #!/bin/bash
 ### _================
-### __Your Script
+### __your script
 ### _================
 
 ### <your code here>

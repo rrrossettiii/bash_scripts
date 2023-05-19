@@ -1,17 +1,17 @@
 #!/bin/bash
 ### _================
-### __Command Prompt
+### __ultimate command prompt
 ### _================
 
-### _(Is prompt enabled?)
+### __is prompt enabled?
 [[ $USE_BS_PROMPT == 0 ]] && return
 
-### _(General)
-PS2="${GRAY}>${RESET} " #_(continue command)
-PS3='Please enter a number from above list: ' #_(script choice)
-PS4="${GRAY}+${RESET} " #_(debug mode)
+### __general
+PS2="${GRAY}>${RESET} " ### continue command
+PS3='Please enter a number from above list: ' ### script choice
+PS4="${GRAY}+${RESET} " ### debug mode
 
-### _(Error codes)
+### __error codes
 EC_CODES=( 1 2 126 127 128 129 130 131 132 133 134 135 136 137 )
 EC_1="General error"
 EC_2="Missing keyword, command, or permission problem"
@@ -30,30 +30,32 @@ EC_137="Fatal error signal 9"
 EC_OUT="Exit status out of range"
 EC_WILD="Unknown error code"
 
-### _(util)
+### __ssh util
 SSH_IP="$(printf "${SSH_CLIENT}" | awk '{ print $1 }')"
 SSH2_IP="$(printf "${SSH2_CLIENT}" | awk '{ print $1 }')"
 
-### _(Decoration)
 ### _================
-local __='\[' #_(non printable character start)
-local ___='\]' #_(non printable character end)
-local NEXT='\n'
-local COLON=$__$RESET$___':'
-local AT=$__$BOLD$___'@'
-local START=$__$BLACK$___'('
-local SPACER=$__$BLACK$___')-('
-local END=$__$BLACK$___')'
-local ERROR=$__$RED$___'ERROR'
-local POINTER_SYMBOL='> '
-local POINTER_USER=$__$GREEN$___$POINTER_SYMBOL$__$RESET$___
-local POINTER_ROOT=$__$RED$___$POINTER_SYMBOL$__$LIGHT_RED$___
-
-### _(Ultimate Command Prompt)
+### __Ultimate Command Prompt
+### _================
 function __setprompt {
-	local LAST_COMMAND=$? #_(must be first!)
+	local LAST_COMMAND=$? ### must be first!
 
-	### _(Info colors)
+	### __decoration
+	### _================
+	local __='\[' ### non printable character start
+	local ___='\]' ### non printable character end
+	local NEXT='\n'
+	local COLON=$__$RESET$___':'
+	local AT=$__$BOLD$___'@'
+	local START=$__$BLACK$___'('
+	local SPACER=$__$BLACK$___')-('
+	local END=$__$BLACK$___')'
+	local ERROR=$__$RED$___'ERROR'
+	local POINTER_SYMBOL='> '
+	local POINTER_USER=$__$GREEN$___$POINTER_SYMBOL$__$RESET$___
+	local POINTER_ROOT=$__$RED$___$POINTER_SYMBOL$__$LIGHT_RED$___
+
+	### __info colors
 	### _================
 	local USER_NAME=$__$LIGHT_ORANGE$___
 	local HOST_NAME=$__$ORANGE$___
@@ -69,8 +71,7 @@ function __setprompt {
 	local ERR_COUNTER=$__$LIGHT_YELLOW$___
 	local ERROR_CODE=$__$LIGHT_RED$___
 
-	### _================
-	### __(Utils)
+	### __utils
 	### _================
 	USER_NAME+='\u'
 	HOST_NAME+='\h'
@@ -86,20 +87,20 @@ function __setprompt {
 	ERR_COUNTER+=$ERROR_COUNTER
 	ERROR_CODE+=$LAST_COMMAND
 
-	### _(host util)
+	### __host util
 	### _================
 	local REAL_HOST=$USER_NAME
-	if [ $SSH2_IP ] || [ $SSH_IP ] ; then #_(if ssh)
-		REAL_HOST+=$AT$HOST_NAME #_(hostname)
+	if [ $SSH2_IP ] || [ $SSH_IP ] ; then ### if ssh
+		REAL_HOST+=$AT$HOST_NAME ### hostname
 	fi
-	### _(pointer util)
+	### __pointer util
 	### _================
 	local POINTER=$POINTER_USER
-	if [[ $EUID -eq 0 ]]; then #_(if root user)
-		POINTER=$POINTER_ROOT #_(pointer)
+	if [[ $EUID -eq 0 ]]; then ### if root user
+		POINTER=$POINTER_ROOT ### change pointer
 	fi
 
-	### _(error util)
+	### __error util
 	### _================
 	local ERROR_LINE=""
 	if [[ $LAST_COMMAND != 0 ]]; then
@@ -118,10 +119,10 @@ function __setprompt {
 	### _================
 	### __Order
 	### _================
-	PS1='' #_(clear PS1)
-	### _(line 0)
+	PS1='' ### clear PS1
+	### __line 0
 	PS1+=$ERROR_LINE
-	### _(line 1)
+	### __line 1
 	PS1+=$START
 	PS1+=$DATE$SPACER$TIME
 	PS1+=$SPACER
@@ -129,7 +130,7 @@ function __setprompt {
 	PS1+=$SPACER
 	PS1+=$NET
 	PS1+=$END
-	### _(line 2)
+	### __line 2
 	PS1+=$NEXT$START
 	PS1+=$REAL_HOST
 	PS1+='('$CMD_COUNTER$COLON$ERR_COUNTER$__$ORANGE$___')'
@@ -138,12 +139,12 @@ function __setprompt {
 	PS1+=$SPACER
 	PS1+=$DIR_FILES$COLON$DIR_SIZE
 	PS1+=$END
-	### _(line 3)
+	### __line 3
 	PS1+=$NEXT
 	PS1+=$POINTER
 }
 
-### _(prevent += each time you reload .bashrc)
+### __prevent += each time you reload .bashrc
 ### _================
 if [[ -z $LOADED_COMMAND_PROMPT ]]; then
 	export LOADED_COMMAND_PROMPT=1;

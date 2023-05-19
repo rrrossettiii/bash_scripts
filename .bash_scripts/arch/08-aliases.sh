@@ -1,19 +1,13 @@
 #!/bin/bash
 ### _================
-### __Basic Arch aliases
+### __basic arch aliases
 ### _================
 
-### _Desktop Environment
+### __upgrade
 ### _================
-alias desktop='systemctl start $DESKTOP_SERVICE' # Start Desktop
-alias desktop-on='systemctl enable $DESKTOP_SERVICE; desktop' # Enable on boot & Start
-alias desktop-off='systemctl disable $DESKTOP_SERVICE' # Disable on boot
-
-### _Upgrade
-### _================
-alias pacman='sudo pacman ' #_(run pacman as root, duh!)
-alias ???='pacman -Qi ' #_(is this package installed?)
-alias pacman-upgrade='pacman -Syu' #_(update pacman packages)
-alias yay-upgrade="sudo -u $ADMIN yay -Syu" #_(update yay packages)
-alias locksmith='pacman -S archlinux-keyring' #_(regenerate archlinux keyring)
-alias plumber='rm -Rf /var/lib/pacman/db.lck' #_(flush pacman db)
+alias pacman='sudo pacman ' ### run pacman as root, duh!
+alias ???='pacman -Qi ' ### is this package installed?
+alias pacman-upgrade='pacman -Syu' ### update pacman packages
+alias yay-upgrade="sudo -u $ADMIN yay -Syu" ### update yay packages
+alias locksmith='pacman -S archlinux-keyring' ### regenerate archlinux keyring
+alias plumber='rm -Rf /var/lib/pacman/db.lck' ### flush pacman db

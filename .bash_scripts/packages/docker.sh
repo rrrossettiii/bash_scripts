@@ -1,6 +1,6 @@
 #!/bin/bash
 ### _================
-### - Docker (docker, docker-compose)
+### - docker (docker, docker-compose)
 ### _================
 alias dock='cd $DOCKER_COMPOSE_PATH' ### place 'docker-compose.yaml' in ~/Documents/Docker
 alias sail='sudo docker compose up -d --remove-orphans' ### start docker containers

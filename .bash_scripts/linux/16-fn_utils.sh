@@ -1,25 +1,25 @@
 #!/bin/bash
 ### _================
-### __Basic Linux fn utils
+### __basic linux fn utils
 ### _================
 
-### _(Bash)
+### bash
 ### _================
 sync-bash-root(){
-	sudo cp /home/$ADMIN/.bashrc /root/; #_(sync .bashrc w/ root)
-	sudo cp -r /home/$ADMIN/.bash_scripts /root/; #_(sync .bash_scripts w/ root)
-	rbrc; #_(reload .bashrc)
+	sudo cp /home/$ADMIN/.bashrc /root/; ### sync .bashrc w/ root
+	sudo cp -r /home/$ADMIN/.bash_scripts /root/; ### sync .bash_scripts w/ root
+	rbrc; ### reload .bashrc
 }
-### _(CPU usage)
+### cpu-usage
 ### _================
 cpu-usage(){
     grep 'cpu ' /proc/stat |
     awk '{usage=($2+$4)*100/($2+$4+$5)} END {print usage}' |
     awk '{printf("%.1f%\n", $1)}'
 }
-### _(Services)
+### services
 ### _================
-services(){ # show active services
+services(){ ### show active services
 	local PARAMS=(
 		list-units
 		--type=service
@@ -33,9 +33,9 @@ services(){ # show active services
 		else sudo systemctl "${PARAMS[@]}" | grep active;
 	fi
 }
-### _(Statuses)
+### statuses
 ### _================
-whatsup(){ #_(nuff said)
+whatsup(){ ### nuff said
     label '~You~' CYAN;
     who;
     label '~CPU~' GREEN;

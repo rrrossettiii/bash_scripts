@@ -1,23 +1,31 @@
 #!/bin/bash
 ### _================
-### __Basic Linux alias utils
+### __basic linux alias utils
 ### _================
 
-alias USERS="awk -F':' '{ print \$1}' /etc/passwd" #_(list all users)
+### __user
+### _================
+alias USERS="awk -F':' '{ print \$1}' /etc/passwd" ### list all users
 
-### _(Drives)
+### __desktop environment
 ### _================
-alias LOCK='chmod -R 775 ' #_(set read only on /<directory>|<file>)
-alias UNLOCK='chmod -R 777 ' #_(allow read and write on /<directory>|<file>)
-alias NOBODY='chown 65534:65534 ' #_(change ownership to nobody)
-### _(Statuses)
+alias desktop='systemctl start $DESKTOP_SERVICE' ### start desktop
+alias desktop-on='systemctl enable $DESKTOP_SERVICE; desktop' ### enable on boot & start
+alias desktop-off='systemctl disable $DESKTOP_SERVICE' ### disable on boot
+
+### __drives
 ### _================
-alias system-time="new-line; timedatectl show --value --p Timezone --p TimeUSec" #_(system time)
-alias ip-address='new-line; ip -o -f inet address | cut -d " " -f 2,7' #_(your ip addresses)
-alias net-stat='ip link ls up' #_(network status)
-alias cpu-stat='new-line; mpstat -P ALL' #_(cpu stats)
-alias core-temp='new-line; sensors | grep "Core\|cpu\|temp"' #_(cpu core temps)
+alias LOCK='chmod -R 775 ' ### set read only on /<directory>||<file>
+alias UNLOCK='chmod -R 777 ' ### allow read and write on /<directory>||<file>
+alias NOBODY='chown 65534:65534 ' ### change ownership to `nobody`
+### __statuses
+### _================
+alias system-time="new-line; timedatectl show --value --p Timezone --p TimeUSec" ### system time
+alias ip-address='new-line; ip -o -f inet address | cut -d " " -f 2,7' ### your ip addresses
+alias net-stat='ip link ls up' ### network status
+alias cpu-stat='new-line; mpstat -P ALL' ### cpu stats
+alias core-temp='new-line; sensors | grep "Core\|cpu\|temp"' ### cpu core temps
 alias journal-lookup='journalctl -xe -f | grep '
-### _(Peripherals)
+### __peripherals
 ### _================
-alias audio-threads='fuser -v /dev/snd/*' #_(audio threads)
+alias audio-threads='fuser -v /dev/snd/*' ### audio threads

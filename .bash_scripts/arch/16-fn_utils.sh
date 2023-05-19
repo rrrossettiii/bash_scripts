@@ -1,22 +1,22 @@
 #!/bin/bash
 ### _================
-### __Arch specific util functions
+### __arch specific util functions
 ### _================
 
-### _Installed packages
+### __installed packages
 ### _================
 packages(){
 	pacman -Qei | awk '/^Name/ { name=$3 } /^Groups/ { if ( $3 != "base" && $3 != "base-devel" ) { print name } }'
 }
 
-### _Unused Dependencies
+### __unused dependencies
 ### _================
-### -- $1 == "prune"
+### $1 == "prune"
 dependencies(){
 	local DEPENDENCIES=$(pacman -Qdtq)
 	if [ "$1" == 'prune' ]; then
-		pacman -Rsn $DEPENDENCIES; #_(prune unused dependencies)
+		pacman -Rsn $DEPENDENCIES; ### prune unused dependencies
 	else
-		printf "$DEPENDENCIES"; #_(print unused dependencies)
+		printf "$DEPENDENCIES"; ### print unused dependencies
 	fi
 }

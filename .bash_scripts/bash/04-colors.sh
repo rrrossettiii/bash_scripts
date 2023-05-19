@@ -1,11 +1,12 @@
 #!/bin/bash
 ### _================
-### _Color Options
+### _color options
 ### _================
+
 export CLICOLOR=1
 force_color_prompt=yes
 
-### _(colors basic)
+### __colors basic
 ### _================
 export WHITE=$(tput setaf 15)
 export BLACK=$(tput setaf 0)
@@ -18,7 +19,7 @@ export CYAN=$(tput setaf 45)
 export GRAY=$(tput setaf 8)
 export ORANGE=$(tput setaf 202)
 export PURPLE=$(tput setaf 57)
-### _(colors light)
+### __colors light
 ### _================
 export LIGHT_GRAY=$(tput setaf 7)
 export LIGHT_RED=$(tput setaf 9)
@@ -29,7 +30,7 @@ export LIGHT_MAGENTA=$(tput setaf 13)
 export LIGHT_CYAN=$(tput setaf 51)
 export LIGHT_ORANGE=$(tput setaf 208)
 export LIGHT_PURPLE=$(tput setaf 63)
-### _(special variables)
+### __special colors
 ### _================
 export RESET=$(tput sgr0)
 export BOLD=$(tput bold)
@@ -38,17 +39,17 @@ export REVERSE=$(tput smso)
 export UNDERLINE=$(tput smul)
 export RING_BELL=$(tput bel)
 
-### _(man-db colors)
+### __man-db colors
 ### _================
-export LESS_TERMCAP_mb=$(tput blink) #_(start bold)
-export LESS_TERMCAP_md=$(tput setaf 2; tput bold) #_(start bold)
-export LESS_TERMCAP_me=$(tput sgr0)  #_(reset)
-export LESS_TERMCAP_so=$(tput smso)  #_(start standout)
-export LESS_TERMCAP_se=$(tput rmso)  #_(stop standout)
-export LESS_TERMCAP_us=$(tput smul)  #_(start underline)
-export LESS_TERMCAP_ue=$(tput rmul)  #_(stop underline)
+export LESS_TERMCAP_mb=$(tput blink) ### start blink
+export LESS_TERMCAP_md=$(tput setaf 2; tput bold) ### start bold
+export LESS_TERMCAP_me=$(tput sgr0)  ### reset
+export LESS_TERMCAP_so=$(tput smso)  ### start standout
+export LESS_TERMCAP_se=$(tput rmso)  ### stop standout
+export LESS_TERMCAP_us=$(tput smul)  ### start underline
+export LESS_TERMCAP_ue=$(tput rmul)  ### stop underline
 
-### _(ls)
+### __ls colors
 ### _================
 LS_DEFAULT_COLORS=(
     'no=00'
@@ -104,4 +105,4 @@ LS_EXTENSION_COLORS=(
     '*.wav=01;35'
     '*.xml=00;31'
 )
-export LS_COLORS=$( printf '%s:' "${LS_DEFAULT_COLORS[@]}" && printf '%s:' "${LS_EXTENSION_COLORS[@]}" ) #_(exports above ls options)
+export LS_COLORS=$( printf '%s:' "${LS_DEFAULT_COLORS[@]}" && printf '%s:' "${LS_EXTENSION_COLORS[@]}" ) ### exports above ls options

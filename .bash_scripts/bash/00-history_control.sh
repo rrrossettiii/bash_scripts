@@ -1,8 +1,8 @@
 #!/bin/bash
 ### _================
-### __History
+### __history control
 ### _================
-alias bash-cc-hist='history -c && history -w;' #_(delete all bash history)
+alias bash-cc-hist='history -c && history -w;' ### delete all bash history
 
 export HISTCONTROL=erasedups
 export HISTIGNORE=ls:history:exit
@@ -12,15 +12,15 @@ shopt -s histappend
 shopt -s cmdhist
 
 
-if [[ -z $LOADED_HISTORY ]];then #_(prevent += each time you reload .bashrc)
+if [[ -z $LOADED_HISTORY ]];then ### prevent += each time you reload .bashrc
 	export LOADED_HISTORY=1;
-	### _(History Options)
+	### __history options
 	### _================
 	PROMPT_COMMAND=(
-	'history -a' #_(append)
-	'history -n' #_(new lines)
-	'history -w' #_(write)
-	'history -c' #_(clear)
-	'history -r' #_(reload)
+	'history -a' ### append
+	'history -n' ### new lines
+	'history -w' ### write
+	'history -c' ### clear
+	'history -r' ### reload
 )
 fi
