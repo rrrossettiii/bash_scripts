@@ -3,7 +3,7 @@
 ### __Basic Linux alias utils
 ### _================
 
-alias USERS="awk -F':' '{ print \$1}' /etc/passwd"
+alias USERS="awk -F':' '{ print \$1}' /etc/passwd" #_(list all users)
 
 ### _(Drives)
 ### _================
