@@ -6,12 +6,10 @@
 ### directory layout
 ### _================
 ### -- $YT_PATH [$ mkdir $YT_PATH]
-###		\__ '/_batches' [$ mkdir $YT_PATH/_batches]
-###		  \__'BATCH_NAME' [$ $EDITOR $YT_PATH/_batches/<BATCH_NAME>]
-###		\__'/_archives' [$ mkdir $YT_PATH/_archives]
-###		  \__'BATCH_NAME' <auto>
-###		\__'/Library' [$ mkdir $YT_PATH/Library]
-###		  \__'/BATCH_NAME' <auto>
+###		\__ '/_batches' [$ `mkdir $YT_PATH/_batches`]
+###		  \__'BATCH_NAME' [$ `$EDITOR $YT_PATH/_batches/<BATCH_NAME>`]
+###		\__'/_archives' [$ `mkdir $YT_PATH/_archives`]
+###		\__'/Library' [$ `mkdir $YT_PATH/Library`]
 
 ### _================
 yt-batch(){ ### batch individual file

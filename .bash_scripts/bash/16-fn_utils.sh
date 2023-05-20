@@ -15,14 +15,14 @@ noho(){ ### run nohup command without nohup.out
 mvv(){ ### 'noho' move item
 	noho mv "${@}"; ### should work with *
 }
-paint(){ ### color text [$ paint $1 $2]
+paint(){ ### color text [$ `paint $1 $2`]
     local -n color=$2 ### set color $2
     printf $color$1$RESET ### color text $1
 }
 label(){ ### label helper
     printf "\n\t\t[$(paint $1 $2)]\n";
 }
-test-array(){ ### i.e. [$ test-array DRIVE_PATHS](no '$')
+test-array(){ ### i.e. [$ `test-array DRIVE_PATHS`]
 	local arr=$1[@]
 	local array=("${!arr}")
 	for i in "${!array[@]}"
@@ -73,7 +73,7 @@ FIND_ALLOW=(
 )
 ### _================
 ### --(args): $1 == <directory>; $2 == -delete;
-### --(i.e.): find /mnt; find /mnt -delete;
+### --(i.e.): `find /mnt` or `find /mnt -delete`
 ### _================
 sweep(){ ### look for *NOT* $FIND_IGNORE
 	find $1 -type f "${FIND_IGNORE[@]}" $2;

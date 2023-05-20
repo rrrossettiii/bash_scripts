@@ -29,7 +29,7 @@ crew(){
             "table{{.Names}}\t{{.Status}}\t{{.Ports}}\t{{.Image}}";;
     esac
 }
-fleet(){ ### create '/fleet' /dir in $DOCKER_COMPOSE_PATH [$ mkdir $DOCKER_COMPOSE_PATH/fleet]
+fleet(){ ### create '/fleet' /dir in $DOCKER_COMPOSE_PATH ($ `mkdir $DOCKER_COMPOSE_PATH/fleet`)
     dock;
     local FLEET_FILES=($(for f in fleet/*; do printf -- "--file\n$f\n"; done)) ### grab file names & add flag(s)
     case $1 in
