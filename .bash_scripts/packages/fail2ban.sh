@@ -9,7 +9,7 @@ f2b(){
     jail)
         sudo $EDITOR /etc/fail2ban/$1.d/$2.local;;
     filter|action)
-        sudo $EDITOR /etc/fail2ban/$1.d/$2.conf;;&
+        sudo $EDITOR /etc/fail2ban/$1.d/$2.conf;;
     j)
         sudo $EDITOR /etc/fail2ban/jail.local;;
     config)
