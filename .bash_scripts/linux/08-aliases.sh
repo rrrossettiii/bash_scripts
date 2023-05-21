@@ -3,9 +3,10 @@
 ### __basic linux alias utils
 ### _================
 
-### __user
+### __system
 ### _================
 alias USERS="awk -F':' '{ print \$1}' /etc/passwd" ### list all users
+alias kryptonite='grep -r . /sys/devices/system/cpu/vulnerabilities/' ### hardware vulnerabilities
 
 ### __desktop environment
 ### _================
