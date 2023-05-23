@@ -1,6 +1,6 @@
 #!/bin/bash
 ### _================
-### __command counter
+# ~/.bash_scripts/bash/32-command_counter.sh
 ### _================
 
 ### *** WARNING: Very tempermental

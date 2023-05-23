@@ -1,6 +1,6 @@
 #!/bin/bash
 ### _================
-### _color options
+# ~/.bash_scripts/bash/04-colors.sh
 ### _================
 
 export CLICOLOR=1

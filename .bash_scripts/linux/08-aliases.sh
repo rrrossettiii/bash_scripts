@@ -1,6 +1,6 @@
 #!/bin/bash
 ### _================
-### __basic linux alias utils
+# ~/.bash_scripts/linux/08-aliases.sh
 ### _================
 
 ### __system

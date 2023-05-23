@@ -1,6 +1,6 @@
 #!/bin/bash
 ### _================
-### __arch specific util functions
+# ~/.bash_scripts/arch/16-fn_utils.sh
 ### _================
 
 ### __installed packages

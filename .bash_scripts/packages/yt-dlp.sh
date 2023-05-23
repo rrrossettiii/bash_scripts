@@ -1,9 +1,10 @@
 #!/bin/bash
 ### _================
-### __yt-dlp
+# ~/.bash_scripts/packages/yt-dlp.sh
 ### _================
-
-### directory layout
+### - https://github.com/yt-dlp/yt-dlp
+### _================
+### - directory layout
 ### _================
 ### -- $YT_PATH [$ mkdir $YT_PATH]
 ###		\__ '/_batches' [$ `mkdir $YT_PATH/_batches`]
@@ -20,13 +21,13 @@ yt-batch(){ ### batch individual file
 		--batch-file $YT_PATH/_batches/$BATCH_NAME ### batch /file/path
 
 		### Library
-		-o "$YT_PATH/Library/$BATCH_NAME/%(title)s - [%(id)s]/%(title)s.%(ext)s" ### output /path
+		-o "$YT_PATH/Library/$BATCH_NAME/%(title)s - [%(id)s]/%(title)s.%(ext)s" ### output /path/filename.ext
 
 		### Subs
-		--sub-langs "en"
-# 		--write-auto-sub
 		--embed-subs
+		--sub-langs "en"
 		--add-metadata
+		# --write-auto-sub
 
 		### COOKIES - YOUTUBE
 		# --cookies $YT_PATH/cookies.txt
@@ -37,7 +38,7 @@ yt-batch(){ ### batch individual file
 		--merge-output-format mkv
 		--recode-video mkv
 
-		### Sponsor Block
+		### Sponsor Block [https://sponsor.ajay.app/]
 		--no-check-certificate
 		--sponsorblock-remove all
 		--force-keyframes-at-cuts
@@ -56,5 +57,5 @@ yt-batch-all(){ ### batch all files in /_batches
 	for i in "${!YT_BATCHES[@]}"
 		do yt-batch "${YT_BATCHES[i]}" ### run downloader for each batch file
 	done
-	# tail -f nohup.out; ### display output
+	# tail -f nohup.out; ### display output logs
 }

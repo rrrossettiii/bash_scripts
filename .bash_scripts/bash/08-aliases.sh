@@ -1,5 +1,6 @@
+#!/bin/bash
 ### _================
-### __alias utils
+# ~/.bash_scripts/bash/08-aliases.sh
 ### _================
 
 ### __sudo
@@ -48,7 +49,7 @@ alias less='less -R' ### clear screen first
 ### __system
 ### _================
 alias processes="ps x | awk 'NR == 1 || \$2 ~ /pts/'" ### list current processes
-alias freespace="new-line; df -h" ### list freespace on system
+alias freespace="df -h" ### list freespace on system
 alias bus-input='cat /proc/bus/input/devices | less' ### list native peripherals 
 ### __extras
 ### _================

@@ -1,6 +1,6 @@
 #!/bin/bash
 ### _================
-### __dynamic variables
+# ~/.bash_scripts/bash/01-dynamic_variables.sh
 ### _================
 
 alias HERE='cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd' ### directory path of wherever this line is run

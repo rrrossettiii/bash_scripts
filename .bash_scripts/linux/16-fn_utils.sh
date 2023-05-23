@@ -1,6 +1,6 @@
 #!/bin/bash
 ### _================
-### __basic linux fn utils
+# ~/.bash_scripts/linux/16-fn_utils.sh
 ### _================
 
 ### bash

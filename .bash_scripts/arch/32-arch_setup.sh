@@ -1,6 +1,6 @@
 #!/bin/bash
 ### _================
-### __arch setup
+# ~/.bash_scripts/arch/32-arch_setup.sh
 ### _================
 
 ### _bootstrap

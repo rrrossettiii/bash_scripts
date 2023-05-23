@@ -1,8 +1,8 @@
+#!/bin/bash
 ### _================
-### __Load all scripts
+# ~/.bash_scripts/init.sh
 ### _================
 
-### define fn
 load-all-scripts(){
     ### get current directory of `this` file
     local SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
@@ -16,5 +16,4 @@ load-all-scripts(){
     # for __bs_file in $SCRIPT_DIR/arch/*; do source $__bs_file;done ### (3) arch-scripts
     # for __bs_file in $SCRIPT_DIR/custom/*; do source $__bs_file;done ### (4) custom-scripts
 }
-### run fn
 load-all-scripts;

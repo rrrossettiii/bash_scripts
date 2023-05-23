@@ -1,6 +1,6 @@
 #!/bin/bash
 ### _================
-### __basic arch aliases
+# ~/.bash_scripts/arch/08-aliases.sh
 ### _================
 
 ### __system

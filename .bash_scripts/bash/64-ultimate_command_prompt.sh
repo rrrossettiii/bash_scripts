@@ -1,6 +1,6 @@
 #!/bin/bash
 ### _================
-### __ultimate command prompt
+# ~/.bash_scripts/bash/64-ultimate_command_prompt.sh
 ### _================
 
 ### __is prompt enabled ???
