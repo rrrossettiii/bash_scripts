@@ -17,7 +17,7 @@ I wanted to create a resource for myself and everyone else to find useful one-li
 - Many useful [one-liners](https://github.com/rrrossettiii/bash_scripts/blob/trunk/.bash_scripts/bash/08-aliases.sh) and bash [utilities](https://github.com/rrrossettiii/bash_scripts/blob/trunk/.bash_scripts/bash/16-fn_utils.sh).
 - Easily add your own scripts by adding a `<script-name>.sh` file to `.bash_scripts/custom`
 - Sophisticated [history control](https://github.com/rrrossettiii/bash_scripts/blob/trunk/.bash_scripts/bash/00-history_control.sh).
-- Custom [command prompt](https://github.com/rrrossettiii/bash_scripts/blob/trunk/.bash_scripts/bash/64-command_prompt.sh).
+- Custom [command prompt](https://github.com/rrrossettiii/bash_scripts/blob/trunk/.bash_scripts/bash/64-ultimate_command_prompt.sh).
 - Unique [command counter](https://github.com/rrrossettiii/bash_scripts/blob/trunk/.bash_scripts/bash/32-command_counter.sh).
 - [Colors!](https://github.com/rrrossettiii/bash_scripts/blob/trunk/.bash_scripts/bash/04-colors.sh)
 
