@@ -53,7 +53,7 @@ yt-batch(){ ### batch individual file
 
 ### _================
 yt-batch-all(){ ### batch all files in /_batches
-	local YT_BATCHES=($(ls $YT_PATH/_batches/)) ### get list of batch files
+	local YT_BATCHES=($(\ls $YT_PATH/_batches/)) ### get list of batch files
 	for i in "${!YT_BATCHES[@]}"
 		do yt-batch "${YT_BATCHES[i]}" ### run downloader for each batch file
 	done

@@ -81,8 +81,8 @@ function __setprompt {
 	CPU+="$(top -bn1 | sed -n '/Cpu/p' | awk '{print $2}' | sed 's/..,//')"
 	NET+="$(awk 'END {print NR}' /proc/net/tcp)"
 	CURRENT_DIR+='\w'
-	DIR_FILES+="$(ls -A -1 | wc -l)"
-	DIR_SIZE+="$(ls -lah | grep -m 1 total | sed 's/total //')"
+	DIR_FILES+="$(\ls -A -1 | wc -l)"
+	DIR_SIZE+="$(\ls -lah | grep -m 1 total | sed 's/total //')"
 	CMD_COUNTER+=$SUCCESS_COUNTER
 	ERR_COUNTER+=$ERROR_COUNTER
 	ERROR_CODE+=$LAST_COMMAND
