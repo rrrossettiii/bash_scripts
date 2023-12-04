@@ -2,49 +2,49 @@
 ### _================
 # ~/.bash_scripts/packages/yt-dlp.sh
 ### _================
-### - https://github.com/yt-dlp/yt-dlp
-### _================
-### - directory layout
-### _================
-### -- $YT_PATH [$ mkdir $YT_PATH]
-###		\__ '/_batches' [$ `mkdir $YT_PATH/_batches`]
-###		  \__'BATCH_NAME' [$ `$EDITOR $YT_PATH/_batches/<BATCH_NAME>`]
-###		\__'/_archives' [$ `mkdir $YT_PATH/_archives`]
-###		\__'/Library' [$ `mkdir $YT_PATH/Library`]
+### -> https://github.com/yt-dlp/yt-dlp
 
 ### _================
-yt-batch(){ ### batch individual file
+### Individual File
+### _================
+yt-batch(){
     cd $YT_PATH; ### change working directory for nohup.out
-	local BATCH_NAME=$1 ### $1 == <BATCH_NAME>
-	local PARAMS=(
-		### Batch
-		--batch-file $YT_PATH/_batches/$BATCH_NAME ### batch /file/path
+	local BATCH=$1 ### $1 == <BATCH_FILE.EXT>
+	local BATCH_NAME=${BATCH%.*}
 
-		### Library
-		-o "$YT_PATH/Library/$BATCH_NAME/%(title)s - [%(id)s]/%(title)s.%(ext)s" ### output /path/filename.ext
+	local PARAMS=(
+		### Batch File
+		--batch-file $YT_PATH/_batches/$BATCH ### batch /file/path
+		### Output
+		-o "$YT_PATH/Library/$BATCH_NAME/%(fulltitle)s.%(ext)s" ### output /path/filename.ext
 
 		### Subs
-		--embed-subs
 		--sub-langs "en"
-		--add-metadata
-		# --write-auto-sub
+		--embed-subs
+		--convert-subs srt
+		### Metadata
+		--embed-info-json 
+		--embed-metadata
+		### Thumbnail
+		--embed-thumbnail
+		--convert-thumbnails png
 
-		### COOKIES - YOUTUBE
-		# --cookies $YT_PATH/cookies.txt
+		### COOKIES
+		--cookies $YT_PATH/cookies.txt
 
-		### Recode [prefer .mkv, h265]
-		-S "codec:h265"
-		--format bestvideo[ext=mp4]+bestaudio[ext=m4a]
+		### Format
+		-f "bv+ba/b"
+		### Recode
 		--merge-output-format mkv
 		--recode-video mkv
 
-		### Sponsor Block [https://sponsor.ajay.app/]
-		--no-check-certificate
-		--sponsorblock-remove all
+		### Sponsor Block -> https://sponsor.ajay.app/
+		--sponsorblock-mark all
+		--sponsorblock-remove sponsor,selfpromo
 		--force-keyframes-at-cuts
 
 		### History
-		--download-archive $YT_PATH/_archives/$BATCH_NAME ### download history
+		--download-archive $YT_PATH/_archives/$BATCH ### download history
 		--break-on-existing ### use download hisory ^^^
 		--break-per-input ### continue the rest of inputs
 		)
@@ -52,7 +52,10 @@ yt-batch(){ ### batch individual file
 }
 
 ### _================
-yt-batch-all(){ ### batch all files in /_batches
+### Multiple Files
+### _================
+### batch all files in /_batches
+yt-batch-all(){
 	local YT_BATCHES=($(\ls $YT_PATH/_batches/)) ### get list of batch files
 	for i in "${!YT_BATCHES[@]}"
 		do yt-batch "${YT_BATCHES[i]}" ### run downloader for each batch file
