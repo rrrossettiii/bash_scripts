@@ -12,7 +12,7 @@ capture_current(){
 	export PREV_COMMAND=$THIS_COMMAND; ### must be second!
 	export THIS_COMMAND=$BASH_COMMAND; ### must be third!
 	
-	if [[ -n $PREV_COMMAND ]];then #_(is command empty)
+	if [[ -n $PREV_COMMAND ]];then ### if command empty
 		if ! grep -q -E "history|setprompt|bashrc|__bs_file" <<< $PREV_COMMAND;then ### ignored commands
 			if [[ $COMMAND_CODE == 0 ]];then 
 				SUCCESS_COUNTER=$((SUCCESS_COUNTER+1)); ### increment count

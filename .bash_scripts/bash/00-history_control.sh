@@ -2,7 +2,6 @@
 ### _================
 # ~/.bash_scripts/bash/00-history_control.sh
 ### _================
-
 alias bash-cc-hist='history -c && history -w;' ### delete all bash history
 
 export HISTCONTROL=erasedups

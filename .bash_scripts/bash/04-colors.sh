@@ -2,11 +2,10 @@
 ### _================
 # ~/.bash_scripts/bash/04-colors.sh
 ### _================
-
 export CLICOLOR=1
 force_color_prompt=yes
 
-### __colors basic
+### Basic
 ### _================
 export WHITE=$(tput setaf 15)
 export BLACK=$(tput setaf 0)
@@ -19,7 +18,7 @@ export CYAN=$(tput setaf 45)
 export GRAY=$(tput setaf 8)
 export ORANGE=$(tput setaf 202)
 export PURPLE=$(tput setaf 57)
-### __colors light
+### Light
 ### _================
 export LIGHT_GRAY=$(tput setaf 7)
 export LIGHT_RED=$(tput setaf 9)
@@ -30,7 +29,7 @@ export LIGHT_MAGENTA=$(tput setaf 13)
 export LIGHT_CYAN=$(tput setaf 51)
 export LIGHT_ORANGE=$(tput setaf 208)
 export LIGHT_PURPLE=$(tput setaf 63)
-### __special colors
+### Special
 ### _================
 export RESET=$(tput sgr0)
 export BOLD=$(tput bold)
@@ -39,7 +38,7 @@ export REVERSE=$(tput smso)
 export UNDERLINE=$(tput smul)
 export RING_BELL=$(tput bel)
 
-### __man-db colors
+### man-db
 ### _================
 export LESS_TERMCAP_mb=$(tput blink) ### start blink
 export LESS_TERMCAP_md=$(tput setaf 2; tput bold) ### start bold
@@ -49,7 +48,7 @@ export LESS_TERMCAP_se=$(tput rmso)  ### stop standout
 export LESS_TERMCAP_us=$(tput smul)  ### start underline
 export LESS_TERMCAP_ue=$(tput rmul)  ### stop underline
 
-### __ls colors
+### ls_colors
 ### _================
 LS_DEFAULT_COLORS=(
     'no=00'

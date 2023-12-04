@@ -3,7 +3,7 @@
 # ~/.bash_scripts/bash/16-fn_utils.sh
 ### _================
 
-### __functions
+### functions
 ### _================
 hide-item(){
 	sudo mv $1 .$1;
@@ -29,10 +29,10 @@ test-array(){ ### i.e. [$ `test-array DRIVE_PATHS`]
 		do printf "$i:\t${array[i]}\n" ### print each array item
 	done
 }
-### __remove files
+### remove files
 ### _================
 FIND_IGNORE=( ### ignore these filetypes
-	### __video
+	### video
 	-a ! -name "*.mkv"
 	-a ! -name "*.mp4"
 	-a ! -name "*.m4v"
@@ -42,33 +42,32 @@ FIND_IGNORE=( ### ignore these filetypes
 	-a ! -name "*.ogv"
 	-a ! -name "*.flv"
 
-	### __subtitle
+	### subtitle
 	-a ! -name "*.ass"
 	-a ! -name "*.sub"
 	-a ! -name "*.srt"
 	-a ! -name "*.idx"
 
-	### __image
+	### image
 	-a ! -name "*.jpg"
 	-a ! -name "*.png"
 
-	### __books
+	### books
 	-a ! -name "*.ydb"
 	-a ! -name "*.cbz"
 	-a ! -name "*.cbr"
 
-	### __archive
+	### archive
 	-a ! -name "*.zip"
 	-a ! -name "*.rar"
 	
-	### __yt-dlp
+	### yt-dlp
 	# -a ! -name "*.description"
 )
 FIND_ALLOW=(
 	-name "" ### keep this
-	-o -name "RARBG.txt"
 	-o -name "*.website"
-	-o -name "*.rtf"
+	# -o -name "*.rtf"
 	-o -name "*.DS_Store" ### OSX
 )
 ### _================
